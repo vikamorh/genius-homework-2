@@ -2,37 +2,37 @@
 /* play-regular - cyrillic_latin */
 @font-face {
   font-display: swap;
-  font-family: 'Play';
+  font-family: "Play";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/play-v19-cyrillic_latin-regular.woff2') format('woff2');
+  src: url("../fonts/play-v19-cyrillic_latin-regular.woff2") format("woff2");
 }
 
 /* play-700 - cyrillic_latin */
 @font-face {
   font-display: swap;
-  font-family: 'Play';
+  font-family: "Play";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/play-v19-cyrillic_latin-700.woff2') format('woff2');
+  src: url("../fonts/play-v19-cyrillic_latin-700.woff2") format("woff2");
 }
 
 /* roboto-serif-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Roboto Serif';
+  font-family: "Roboto Serif";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/roboto-serif-v13-latin-regular.woff2') format('woff2');
+  src: url("../fonts/roboto-serif-v13-latin-regular.woff2") format("woff2");
 }
 
 /* roboto-serif-600 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Roboto Serif';
+  font-family: "Roboto Serif";
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/roboto-serif-v13-latin-600.woff2') format('woff2');
+  src: url("../fonts/roboto-serif-v13-latin-600.woff2") format("woff2");
 }
 :root {
   --color-brand-light: #2b7fff;
@@ -48,7 +48,6 @@ body {
   font-size: 22px;
   line-height: 1.7;
   display: block;
-  background-color: gainsboro;
 }
 h1,
 h2,
@@ -60,12 +59,9 @@ p {
   margin-top: 0;
 }
 
-a {
-  font-style: normal;
-}
 .container {
   width: 100%;
-  max-width: 1288px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -74,21 +70,44 @@ address {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
+.parent-container {
+  background: linear-gradient(
+      89deg,
+      #fff 30.62%,
+      rgba(255, 255, 255, 0.85) 41.31%,
+      rgba(255, 255, 255, 0.19) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url(./images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 /* Header */
-
 .header-container {
   display: flex;
-  justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  width: 1440px;
+  height: 106px;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 240px;
 }
 
-.header-img {
-  width: 74px;
-  height: 42px;
+.header-menu {
+  display: flex;
+  flex-grow: 1;
+  gap: 56px;
 }
 
 .header-link {
@@ -102,43 +121,14 @@ ul {
   color: var(--color-brand-light);
 }
 
-.header-icon {
-  fill: var(--color-brand-dark);
-}
-
-.header-icon:hover {
-  fill: var(--color-brand-light);
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  gap: 240px;
-}
-
-.header-logo {
-  display: flex;
-  flex-grow: 1;
-}
-
-.header-menu {
-  display: flex;
-  flex-grow: 1;
-  gap: 56px;
-  margin: 0;
-  padding: 0;
-}
-
-.header-social {
-  flex-grow: 1;
-  display: flex;
-  gap: 32px;
-  margin: 0;
-  padding: 0;
-}
-
 /* hero section */
+.hero-section {
+}
+
+.hero-container {
+  padding-left: 99px;
+}
+
 .title {
   color: var(--color-brand-dark);
   font-size: 18px;
@@ -175,9 +165,12 @@ ul {
 
 .button-info {
   color: var(--сolor-secondary);
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .secondary-title {
+  max-width: 529px;
   color: var(--color-brand-dark);
   font-family: play, sans-serif;
   font-weight: 700;
