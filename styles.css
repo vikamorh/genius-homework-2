@@ -1,0 +1,248 @@
+/* fonts */
+/* play-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/play-v19-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+/* play-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/play-v19-cyrillic_latin-700.woff2') format('woff2');
+}
+
+/* roboto-serif-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-serif-v13-latin-regular.woff2') format('woff2');
+}
+
+/* roboto-serif-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/roboto-serif-v13-latin-600.woff2') format('woff2');
+}
+:root {
+  --color-brand-light: #2b7fff;
+  --color-brand-dark: #011c44;
+  --color-primary: #ffffff;
+  --сolor-secondary: #4a4a4a;
+  --color-secondary-black: #000000;
+}
+body {
+  color: var(--color-primary);
+  font-family: roboto, serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.7;
+  display: block;
+  background-color: gainsboro;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+a {
+  font-style: normal;
+}
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+address {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-img {
+  width: 74px;
+  height: 42px;
+}
+
+.header-link {
+  color: var(--color-brand-dark);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.header-link:hover {
+  color: var(--color-brand-light);
+}
+
+.header-icon {
+  fill: var(--color-brand-dark);
+}
+
+.header-icon:hover {
+  fill: var(--color-brand-light);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 240px;
+}
+
+.header-logo {
+  display: flex;
+  flex-grow: 1;
+}
+
+.header-menu {
+  display: flex;
+  flex-grow: 1;
+  gap: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-social {
+  flex-grow: 1;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+/* hero section */
+.title {
+  color: var(--color-brand-dark);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.hero-title {
+  color: var(--color-brand-light);
+  font-family: play, sans-serif;
+  font-weight: 700;
+  font-size: 140px;
+  line-height: 0.8;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.button {
+  background-color: var(--color-brand-light);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.17;
+  width: 219px;
+  height: 53px;
+  cursor: pointer;
+  border: 2px solid var(--color-brand-light);
+  border-radius: 32px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-brand-dark);
+}
+
+.button-info {
+  color: var(--сolor-secondary);
+}
+
+.secondary-title {
+  color: var(--color-brand-dark);
+  font-family: play, sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.15;
+  margin-bottom: 40px;
+}
+
+.secondary-title .accent {
+  color: var(--color-brand-light);
+  font-family: play, sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.15;
+}
+
+/* .about-section */
+
+.about-info {
+  color: var(--color-brand-dark);
+  margin-bottom: 40px;
+}
+.about-info .accent {
+  color: var(--color-brand-light);
+}
+/* info-section */
+.info {
+  color: var(--color-secondary-black);
+}
+
+/* procederes-section */
+
+/* footer */
+.footer-link {
+  color: var(--color-primary);
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 1.17;
+}
+
+.footer-link:hover {
+  color: var(--color-brand-light);
+}
+.adress-link {
+  text-decoration: none;
+}
+
+.form-text {
+  color: var(--color-primary);
+}
+
+.form-text .accent {
+  color: var(--color-brand-light);
+}
+
+.adress-link {
+  color: var(--color-primary);
+  font-size: 16px;
+  line-height: 1.17;
+}
+.adress-link:hover {
+  color: var(--color-brand-light);
+}
+.adress-copyright {
+  color: #747272;
+  font-size: 13px;
+  line-height: 1.17;
+}
