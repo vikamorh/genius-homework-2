@@ -68,7 +68,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -136,6 +136,10 @@ ul {
   display: flex;
   align-items: flex-start;
 }
+
+.header-socials-icon {
+  fill: var(--color-brand-dark);
+}
 /* hero section */
 .hero-container {
   padding-top: 48.52px;
@@ -189,6 +193,15 @@ ul {
 }
 
 /* .about-section */
+.about-section::before {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  fill: var(--color-brand-light);
+  content: "";
+  background-image: url(./images/Star-brand-light.png);
+  background-repeat: no-repeat;
+}
 .about-section-container {
   display: flex;
 }
@@ -245,10 +258,30 @@ ul {
   margin-left: 168px;
 }
 
+.about-section::after {
+  position: absolute;
+  content: "";
+  width: 1849px;
+  height: 1785px;
+  flex-shrink: 0;
+  background-image: url(./images/background-info.svg);
+  background-repeat: no-repeat;
+}
 /* info-section */
+.about-section::after {
+  position: absolute;
+  content: "";
+  background-image: url(./images/background-info.svg);
+  background-repeat: no-repeat;
+}
 
 .title-centered {
   text-align: center;
+}
+
+.info-title {
+  padding-top: 176px;
+  margin-bottom: 48px;
 }
 
 .info-section-container {
@@ -256,9 +289,7 @@ ul {
   position: relative;
   flex-direction: column;
   margin-bottom: 96px;
-  margin-top: 176px;
   align-items: center;
-  gap: 48px;
 }
 
 .info-section-background {
@@ -295,13 +326,49 @@ ul {
   text-align: center;
 }
 /* procederes-section */
-.procedures-section-slider {
+.procedures-container {
   display: flex;
+  margin-top: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
 
 .procedures-section-list {
   display: flex;
   gap: 16px;
+}
+
+.procedure-card {
+  position: relative;
+  height: 456px;
+  width: 344px;
+  border-radius: 4px 120px;
+  /* border: 1px solid black; */
+  background-image: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.73) 84.61%,
+    var(--color-brand-dark) 101.39%
+  );
+}
+
+.procedure-card img {
+  position: absolute;
+  border-radius: 4px 120px;
+  z-index: -1;
+}
+
+.procedures-text {
+  display: flex;
+  line-height: 1.18;
+  max-width: 152px;
+  text-align: center;
+  padding: 372px 77px 32px 115px;
+}
+
+.swiper-slide {
+  flex-basis: calc((100% - 32px) / 3);
 }
 
 /* carousel */
@@ -324,12 +391,64 @@ ul {
   fill: var(--color-primary);
 }
 
+/* contact-section */
+.map-title {
+  padding-top: 96px;
+  margin-bottom: 48px;
+}
+
 /* footer */
+.footer {
+  position: relative;
+  padding: 56px 0px;
+  background-color: var(--color-brand-dark);
+  background-image: url(./images/background-footer.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.footer::after {
+  position: absolute;
+  bottom: -61px;
+  right: -31px;
+  width: 278px;
+  height: 213px;
+  content: "";
+  background-image: url(./images/footer-image.png);
+  background-repeat: no-repeat;
+}
+
+.footer-container {
+  display: flex;
+  gap: 186px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 186px;
+}
+
+.footer-adress {
+  display: flex;
+  gap: 186px;
+}
+.footer-adress-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-adress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .footer-link {
   color: var(--color-primary);
   font-size: 16px;
+  font-style: normal;
   text-decoration: none;
-  line-height: 1.17;
 }
 
 .footer-link:hover {
@@ -347,9 +466,14 @@ ul {
   color: var(--color-brand-light);
 }
 
+.footer-socials-icon {
+  fill: var(--color-primary);
+}
+
 .adress-link {
   color: var(--color-primary);
   font-size: 16px;
+  font-style: normal;
   line-height: 1.17;
 }
 .adress-link:hover {
@@ -357,6 +481,7 @@ ul {
 }
 .adress-copyright {
   color: #747272;
+  font-style: normal;
   font-size: 13px;
   line-height: 1.17;
 }
